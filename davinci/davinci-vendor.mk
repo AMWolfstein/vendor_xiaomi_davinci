@@ -517,6 +517,14 @@ PRODUCT_PACKAGES += \
     libasphere \
     libmisoundfx \
     libshoebox \
+    libfastcvdsp_stub \
+    libfastcvopt \
+    libscveCommon \
+    libscveCommon_stub \
+    libscveObjectSegmentation \
+    libscveObjectSegmentation_stub \
+    libscveObjectTracker \
+    libscveObjectTracker_stub \
     vendor.qti.hardware.wifidisplaysession@1.0_vendor \
     vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl \
     com.qualcomm.qti.dpm.api@1.0_vendor \
