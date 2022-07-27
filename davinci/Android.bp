@@ -6,6 +6,23 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+	name: "libcameraservice_micam",
+	stem: "libcameraservice",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/lib64/libcameraservice.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libacdb-fts",
 	owner: "xiaomi",
 	strip: {
@@ -1684,6 +1701,41 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+	name: "vendor.qti.hardware.camera.device@3.5",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.camera.device@3.5.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "vendor.qti.hardware.camera.device@3.5_system_ext",
+	stem: "vendor.qti.hardware.camera.device@3.5",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/system_ext/lib64/vendor.qti.hardware.camera.device@3.5.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
 	name: "libfastcvdsp_stub",
 	owner: "xiaomi",
 	strip: {
@@ -2475,6 +2527,74 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/libssc.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "android.hardware.camera.provider@2.4-legacy",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/android.hardware.camera.provider@2.4-legacy.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libcamxfdalgov7",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libcamxfdalgov7.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libmialgoengine",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libmialgoengine.so"],
+		},
+	},
+	compile_multilib: "64",
+	check_elf_files: false,
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libswregistrationalgo",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm64: {
+			srcs: ["proprietary/vendor/lib64/libswregistrationalgo.so"],
 		},
 	},
 	compile_multilib: "64",
@@ -4313,6 +4433,42 @@ cc_prebuilt_library_shared {
 	target: {
 		android_arm: {
 			srcs: ["proprietary/vendor/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so"],
+		},
+	},
+	compile_multilib: "32",
+	check_elf_files: false,
+	relative_install_path: "rfsa/adsp",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libSuperSensor_skel",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/rfsa/adsp/libSuperSensor_skel.so"],
+		},
+	},
+	compile_multilib: "32",
+	check_elf_files: false,
+	relative_install_path: "rfsa/adsp",
+	prefer: true,
+	soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+	name: "libVDHexagonSuperPhoto_skel",
+	owner: "xiaomi",
+	strip: {
+		none: true,
+	},
+	target: {
+		android_arm: {
+			srcs: ["proprietary/vendor/lib/rfsa/adsp/libVDHexagonSuperPhoto_skel.so"],
 		},
 	},
 	compile_multilib: "32",
